@@ -17,7 +17,13 @@ console.log(kolobok('Лиса'));
 
 
 function newYear(name) {
-  return `${name}! ${name}! ${name}!`;
+  switch (name) {
+    case 'Дед Мороз':
+    case 'Снегурочка':
+      return `${name}! ${name}! ${name}!`;
+    default:
+      return 'Неизвестный персонаж';
+  }
 }
 
 console.log(newYear("Дед Мороз"));
