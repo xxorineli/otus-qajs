@@ -47,6 +47,12 @@ describe('newYear function', () => {
       newYear('Неизвестный')
     }).toThrow('Неизвестный персонаж')
   })
+
+  it('should throw error for unknown character', () => {
+    expect(() => {
+      newYear('Неизвестный')
+    }).toThrow('Неизвестный персонаж')
+  })
 })
 
 // Parametrized test (function)
