@@ -9,13 +9,22 @@ export const farewell = name => {
 export function kolobok(character) {
   switch (character) {
     case 'Дедушка':
-      return 'Я от дедушки ушел';
+      return 'Я от дедушки ушел'
     case 'Заяц':
-      return 'Я от зайца ушел';
+      return 'Я от зайца ушел'
     case 'Лиса':
-      return 'Меня съели';
+      return 'Меня съели'
     default:
-      return 'Неизвестный персонаж';
-      // throw new Error ('Неизвестный персонаж');
+      throw new Error('Я встретил кого-то неизвестного') // throw останавливает скрипт с ошибкой
+  }
+}
+
+export function newYear(character) {
+  switch (character) {
+    case 'Дед Мороз':
+    case 'Снегурочка':
+      return `${character}! ${character}! ${character}!`
+    default:
+      throw new Error('Неизвестный персонаж')
   }
 }

@@ -7,7 +7,7 @@ function kolobok(character) {
     case 'Лиса':
       return 'Меня съели';
     default:
-      return 'Неизвестный персонаж';
+      return 'Я встретил кого-то неизвестного';
   }
 }
 
@@ -16,11 +16,11 @@ console.log(kolobok('Заяц'));
 console.log(kolobok('Лиса'));
 
 
-function newYear(name) {
-  switch (name) {
+function newYear(character) {
+  switch (character) {
     case 'Дед Мороз':
     case 'Снегурочка':
-      return `${name}! ${name}! ${name}!`;
+      return `${character}! ${character}! ${character}!`;
     default:
       return 'Неизвестный персонаж';
   }

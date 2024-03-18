@@ -1,4 +1,4 @@
-import {farewell, greet} from '../src/modules.js'
+import { farewell, greet } from '../src/modules.js'
 
 describe('greet', () => {
   // For TDD approach
