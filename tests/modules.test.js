@@ -1,4 +1,4 @@
-import { farewell, greet } from '../src/modules.js'
+import { farewell, greet, kolobok } from '../src/modules.js'
 
 describe('greet', () => {
   // For TDD approach
@@ -32,6 +32,6 @@ describe('farewell', () => {
 
 describe('kolobok', () => {
   it('can see strange', () => {
-    expect(farewell('Дед Мороз')).toBe('Я встретил кого-то неизвестного')
+    expect(kolobok('Дед Мороз')).toBe('Я встретил кого-то неизвестного')
   })
 })
