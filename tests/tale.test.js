@@ -25,6 +25,7 @@ describe('kolobok function', () => {
   // для функции где есть throw new Error('...')
   try { kolobok('Неизвестный')
   // проверяем ошибку на соответствие спецификации
+  // error.message = текст из throw new Error
   } catch (error) { expect(error.message).toBe('Я встретил кого-то неизвестного')
   // и вызываем (например, убрать прелоадер на морде)
   } finally { console.log('Будет выполнено всегда') }

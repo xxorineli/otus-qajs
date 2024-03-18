@@ -29,9 +29,29 @@ describe('farewell', () => {
   })
 })
 
+// Вызовет ошибку
+// describe('kolobok', () => {
+//   it('can see strange', () => {
+//     expect(kolobok('Дед Мороз')).toBe('Я встретил кого-то неизвестного')
+//   })
+// })
+
 
 describe('kolobok', () => {
   it('can see strange', () => {
-    expect(kolobok('Дед Мороз')).toBe('Я встретил кого-то неизвестного')
+    expect(() => {
+      kolobok('Дед Мороз')
+  })
+      .toThrow('Я встретил кого-то неизвестного')
+
+    // без Jest с try-catch
+    // try { 
+    //   kolobok('Дед Мороз')
+    //   console.log('Мы это не видим')
+    // } catch (error) { 
+    //   /* ошибку throw new Error('Я встретил кого-то неизвестного') можно заменить 
+    //   на строку throw 'Я встретил кого-то неизвестного', тогда будет catch (message) и expect(message) */
+    //   expect(error.message).toBe('Я встретил кого-то неизвестного')
+    // }
   })
 })
