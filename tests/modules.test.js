@@ -28,3 +28,10 @@ describe('farewell', () => {
     expect(farewell('')).toBe('Goodbye, ')
   })
 })
+
+
+describe('kolobok', () => {
+  it('can see strange', () => {
+    expect(farewell('Дед Мороз')).toBe('Я встретил кого-то неизвестного')
+  })
+})
