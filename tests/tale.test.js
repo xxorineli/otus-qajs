@@ -87,7 +87,7 @@ describe('parametrized kolobok function', () => {
 // Так лучше не делать, хотя иногда используется - позитивный и негативный тест вместе
 // eslint-disable-next-line jest/no-identical-title
 describe('parametrized kolobok function', () => {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars, no-undef
   const data = [
     {
       name: 'Дедушка',
