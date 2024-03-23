@@ -5,7 +5,7 @@ describe('greet', () => {
   // it('is function', () => {
   //   expect(typeof greet).toBe('function')
   // })
-  
+
   it('should greet Eli', () => {
     // Using Arrange-Act-Assert pattern
     const username = 'Eli' // arrange
@@ -17,7 +17,6 @@ describe('greet', () => {
     expect(greet('')).toBe('Hello, ')
   })
 })
-
 
 describe('farewell', () => {
   it('should farewell Eli', () => {
@@ -36,20 +35,18 @@ describe('farewell', () => {
 //   })
 // })
 
-
 describe('kolobok', () => {
   it('can see strange', () => {
     expect(() => {
       kolobok('Дед Мороз')
-  })
-      .toThrow('Я встретил кого-то неизвестного')
+    }).toThrow('Я встретил кого-то неизвестного')
 
     // без Jest с try-catch
-    // try { 
+    // try {
     //   kolobok('Дед Мороз')
     //   console.log('Мы это не видим')
-    // } catch (error) { 
-    //   /* ошибку throw new Error('Я встретил кого-то неизвестного') можно заменить 
+    // } catch (error) {
+    //   /* ошибку throw new Error('Я встретил кого-то неизвестного') можно заменить
     //   на строку throw 'Я встретил кого-то неизвестного', тогда будет catch (message) и expect(message) */
     //   expect(error.message).toBe('Я встретил кого-то неизвестного')
     // }

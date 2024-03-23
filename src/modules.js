@@ -3,7 +3,7 @@ export function greet(name) {
 }
 
 export const farewell = name => {
-  return `Goodbye, ${name}` 
+  return `Goodbye, ${name}`
 }
 
 export function kolobok(character) {
