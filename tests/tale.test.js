@@ -79,7 +79,7 @@ describe('parametrized kolobok function', () => {
   test.each(testCasesPositive)(
     'should return the correct response for $name',
     ({ name, expected }) => {
-      expect(kolobok('name')).toBe(expected)
+      expect(kolobok(name)).toBe(expected)
     },
   )
 })
@@ -87,7 +87,6 @@ describe('parametrized kolobok function', () => {
 // Так лучше не делать, хотя иногда используется - позитивный и негативный тест вместе
 // eslint-disable-next-line jest/no-identical-title
 describe('parametrized kolobok function', () => {
-  // eslint-disable-next-line no-unused-vars, no-undef
   const data = [
     {
       name: 'Дедушка',
@@ -106,18 +105,18 @@ describe('parametrized kolobok function', () => {
       expectedError: 'Я встретил кого-то неизвестного',
     },
   ]
-})
 
-// eslint-disable-next-line no-undef
-test.each(data)(
-  'should return the correct response for $name',
-  ({ name, expected, expectedError }) => {
-    if (expectedError) {
-      expect(() => {
-        kolobok(name)
-      }).toThrow(expected)
-    } else {
-      expect(kolobok('name')).toBe(expected)
-    }
-  },
-)
+
+  test.each(data)(
+    'should return the correct response for $name',
+    ({ name, expected, expectedError }) => {
+      if (expectedError) {
+        expect(() => {
+          kolobok(name)
+        }).toThrow(expected)
+      } else {
+        expect(kolobok(name)).toBe(expected)
+      }
+    },
+  )
+})
