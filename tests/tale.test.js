@@ -106,7 +106,6 @@ describe('parametrized kolobok function', () => {
     },
   ]
 
-
   test.each(data)(
     'should return the correct response for $name',
     ({ name, expected, expectedError }) => {

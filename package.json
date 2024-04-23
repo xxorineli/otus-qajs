@@ -12,7 +12,8 @@
     "codestyle": "run-p lint format",
     "codestyle:fix": "run-s lint:fix format:fix",
     "build": "babel src --out-dir build --source-maps inline",
-    "test": "jest"
+    "test": "jest --setupFiles dotenv/config",
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "Eli Sorin <xxorineli@gmail.com>",
@@ -96,6 +97,7 @@
     "core-js": "^3.36.0",
     "core-js-compat": "^3.36.0",
     "create-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
     "cross-spawn": "^7.0.3",
     "debug": "^4.3.4",
     "dedent": "^1.5.1",
@@ -107,6 +109,7 @@
     "diff-sequences": "^29.6.3",
     "dir-glob": "^3.0.1",
     "doctrine": "^3.0.0",
+    "dotenv": "^16.4.5",
     "electron-to-chromium": "^1.4.693",
     "emittery": "^0.13.1",
     "emoji-regex": "^8.0.0",
