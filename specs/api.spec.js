@@ -102,11 +102,11 @@ describe('bookstore.demoqa API tests with Jest - generateToken', () => {
   })
   // Тест кейс на успешную генерацию токена: верные учетные данные
   test('should pass to generate a token with correct credentials', async () => {
-    // Определяет пользовательские данные с неверными учетными данными
+    // Определяет пользовательские данные с верными учетными данными
     // Заменить желаемым логином и паролем
     const response = await generateToken('correct_user', 'Password123!')
-    // Ожидает ответа со статус кодом 200 (OK) или иным кодом ошибки,
-    // обозначающим, что учетные данные неверны
+    // Ожидает ответа со статус кодом 200 (OK) или иным кодом,
+    // обозначающим, что учетные данные верны
     expect(response.status).toBe(200)
     // Определяет полученные в ответе на POST /Account/v1/GenerateToken данные
     const body = await response.json()
